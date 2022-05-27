@@ -1,0 +1,181 @@
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 75px;
+    background: #E3E6F3;
+    box-shadow: 0 5px 15px rgba(0,0, 0, 0.06);
+    width: 90%;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active{
+    color: #088178;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#mobile{
+    display: none;
+    align-items: center;
+}
+
+#close{
+    display: none;
+}
+
+/* sign-up form */
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background: url("bg\ image1.jpg");
+    /* background-size: cover; */
+}
+
+.box{
+    width: 300px;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(0,0,0,0.6);
+    text-align: center;
+}
+
+.box h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+
+}
+
+.box input[type="text"],.box input[type="password"],.box input[type="email"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid #b60303;
+    padding: 14px 10px;
+    width: 220px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25;
+}
+
+.box input[type="text"]:focus,.box input[type="password"]:focus,.box input[type="email"]:focus{
+    width: 270px;
+    border-color: #ffc400ec;
+}
+
+.box input[type="submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid #ffc400ec;
+    padding: 14px 35px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25;
+    cursor: pointer;
+}
+
+.box input[type="submit"]:hover{
+    background: #ffc400ec;
+}
+
+.box p{
+    color: white;
+}
+
+.box p span a{
+    color: white;
+}
+
+.box p span a:hover{
+    color: #b60303;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:799px){
+    #header{
+        width: 95%;
+    }
+    .box {
+        
+        top: 53%;
+        left: 60%;
+    }
+    
+}
+
+@media (max-width: 477px){
+
+    body{
+     background-repeat: no-repeat;   
+    }
+
+    #header{
+        width: 190%;
+    }
+
+    .box {
+        
+        top: 65%;
+        left: 115%;
+    }
+}
